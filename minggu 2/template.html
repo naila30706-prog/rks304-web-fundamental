@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { serif: ['Fraunces','serif'], sans: ['Inter','sans-serif'] },
+      colors: { blush:'#FFF4F7', ink:'#4A3540', muted:'#B98CA3', rose:'#F472B6', rosedeep:'#EC4899', line:'#F6D9E5' }
+    }}}
+  </script>
+</head>
+<body class="bg-blush text-ink font-sans min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-8 py-5 border-b border-line">
+    <span class="font-serif italic text-2xl">Toko Admin</span>
+    <span class="text-sm text-muted">Admin</span>
+  </header>
+
+  <div class="flex flex-1">
+
+    <!-- NAVIGASI -->
+    <nav class="w-48 px-6 py-8 border-r border-line flex flex-col gap-5 text-sm">
+      <a href="dashboard.html" class="hover:text-rose">Dashboard</a>
+      <a href="products.html" class="hover:text-rose">Products</a>
+      <a href="#" class="hover:text-rose">Users</a>
+      <a href="#" class="hover:text-rose">Setting</a>
+      <a href="index.html" class="mt-auto border border-line rounded px-3 py-2 text-center hover:border-rose hover:text-rose">Logout</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main class="flex-1 px-10 py-8">
+      <h2 class="font-serif text-3xl mb-2">Judul Halaman</h2>
+      <p class="text-muted max-w-md">Ini adalah paragraf contoh untuk starter template. Ganti bagian dalam tag main ini sesuai isi halaman masing-masing.</p>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-xs text-muted py-4 border-t border-line">
+    &copy; 2026 Toko Admin
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Toko Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { serif: ['Fraunces','serif'], sans: ['Inter','sans-serif'] },
+      colors: { blush:'#FFF4F7', ink:'#4A3540', muted:'#B98CA3', rose:'#F472B6', rosedeep:'#EC4899', line:'#F6D9E5' }
+    }}}
+  </script>
+</head>
+<body class="bg-blush text-ink font-sans min-h-screen flex items-center justify-center">
+
+  <!-- KOTAK LOGIN -->
+  <div class="border border-line rounded-lg px-10 py-10 w-96 bg-white">
+
+    <p class="font-serif italic text-3xl text-center mb-1">Toko Admin</p>
+    <p class="text-muted text-sm text-center mb-8">Masuk untuk lanjut ke dashboard</p>
+
+    <form onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+
+      <label class="block text-sm text-muted mb-1">Username</label>
+      <input type="text" placeholder="Masukkan username"
+             class="w-full border-b border-line focus:border-rose outline-none py-2 mb-6 bg-transparent">
+
+      <label class="block text-sm text-muted mb-1">Password</label>
+      <input type="password" placeholder="Masukkan password"
+             class="w-full border-b border-line focus:border-rose outline-none py-2 mb-8 bg-transparent">
+
+      <button type="submit"
+              class="w-full bg-rose hover:bg-rosedeep text-white text-sm font-medium py-3 rounded transition-colors">
+        Login
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

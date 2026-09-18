@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Nailah Ramadhani</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Profil</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Aktifkan night mode" title="Ubah tema">☾</button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="contact.html">identitas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HEADING ===== -->
+    <section class="page-heading">
+      <div class="container">
+        <p class="eyebrow-plain">PORTFOLIO PROJECT</p>
+        <h1>Project Basic Learning</h1>
+        <p>Kumpulan project yang pernah dibuat selama belajar di prodi rks.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT GRID ===== -->
+    <section class="portfolio-section">
+      <div class="container project-grid">
+
+        <article class="project-card">
+          <div class="project-thumb">01</div>
+          <div class="project-body">
+            <h3>Password Weakness Analyzer</h3>
+            <p>Web ini dibuat untuk mengecek seberapa kuat password yang telah dibuat.</p>
+            <div class="tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+            </div>
+            <a href="#" class="project-link">Lihat Repositori &rarr;</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">02</div>
+          <div class="project-body">
+            <h3>AMES</h3>
+            <p>merupakan sebuah sistem simulasi infrastruktur perusahaan kecil (mini interfarace) yang dirancang untuk mengintegrasikan layanan jaringan,manajemen server,serta mekanisme keamanan dan proteksi data dalam satu lingkungan terpusat.</p>
+            <div class="tech-badges">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">HTML</span>
+            </div>
+            <a href="#" class="project-link">Lihat Repositori &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Nailah Ramadhani. Dibuat untuk tugas praktikum Web Fundamental.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

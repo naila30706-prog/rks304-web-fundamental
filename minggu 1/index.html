@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nailah Ramadhani — Web Profil Pribadi</title>
+
+  <!-- Font dari Google Fonts, bebas dipakai gratis -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- File CSS kita sendiri -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Profil</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Aktifkan night mode" title="Ubah tema">☾</button>
+
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Identitas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-visual">
+          <div class="hero-avatar">
+            <img src="foto-profil.jpg" alt="Foto Nailah Ramadhani" />
+          </div>
+          <div class="hero-mini-card">
+            <span>Instagram</span>
+            <strong>Naicyla__</strong>
+          </div>
+        </div>
+
+        <div class="hero-text">
+
+          <h1><span>Nailah Ramadhani</span></h1>
+          <p class="role"></p>
+
+          <p class="bio">
+      
+        
+          </p>
+
+          <div class="info-list">
+            <div>
+              <strong>Fakultas</strong>
+              <span>Teknik</span>
+            </div>
+            <div>
+              <strong>Jurusan</strong>
+              <span>Teknik Informatika</span>
+            </div>
+            <div>
+              <strong>Prodi</strong>
+              <span>Rekayasa Keamanan Siber</span>
+            </div>
+            <div>
+              <strong>Asal</strong>
+              <span>Aceh Tamiang</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="portfolio.html" class="btn btn-primary">Lihat Portfolio</a>
+            <a href="contact.html" class="btn btn-outline">Lihat Identitas</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT & SKILLS SECTION ===== -->
+    <section class="about">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow-plain">About Me</p>
+          <h2>Tentang Saya</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text card-panel">
+            <p>
+              Saya tertarik mempelajari dunia keamanan siber dan pengembangan web sejak awal
+              kuliah, dan sedang membiasakan diri membangun halaman web dari dasar menggunakan
+              HTML dan CSS sebelum lanjut ke topik yang lebih kompleks.
+            </p>
+
+            <h3>Riwayat Pendidikan</h3>
+            <ul class="timeline">
+              <li>
+                <span class="timeline-year">2025 — Sekarang</span>
+                <strong class="timeline-title">Mahasiswa</strong>
+                <span class="timeline-desc">Rekayasa Keamanan Siber</span>
+              </li>
+              <li>
+                <span class="timeline-year">Perguruan Tinggi</span>
+                <strong class="timeline-title">Politeknik Negeri Batam</strong>
+                <span class="timeline-desc"></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-skills card-panel">
+            <h2>Yang Sedang Dipelajari</h2>
+            <div class="skill-badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript Dasar</span>
+              <span class="badge">Git & GitHub</span>
+              <span class="badge">Microsoft Office</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Nailah Ramadhani. Dibuat untuk tugas praktikum Web Fundamental.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

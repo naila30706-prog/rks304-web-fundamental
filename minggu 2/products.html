@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Toko Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { serif: ['Fraunces','serif'], sans: ['Inter','sans-serif'] },
+      colors: { blush:'#FFF4F7', ink:'#4A3540', muted:'#B98CA3', rose:'#F472B6', rosedeep:'#EC4899', line:'#F6D9E5' }
+    }}}
+  </script>
+</head>
+<body class="bg-blush text-ink font-sans min-h-screen flex flex-col">
+
+  <!-- HEADER -->
+  <header class="flex items-center justify-between px-8 py-5 border-b border-line">
+    <span class="font-serif italic text-2xl">Toko Admin</span>
+    <span class="text-sm text-muted">Admin</span>
+  </header>
+
+  <div class="flex flex-1">
+
+    <!-- NAVIGASI -->
+    <nav class="w-48 px-6 py-8 border-r border-line flex flex-col gap-5 text-sm">
+      <a href="dashboard.html" class="hover:text-rose">Dashboard</a>
+      <a href="products.html" class="text-rose">Products</a>
+      <a href="#" class="hover:text-rose">Users</a>
+      <a href="#" class="hover:text-rose">Setting</a>
+      <a href="index.html" class="mt-auto border border-line rounded px-3 py-2 text-center hover:border-rose hover:text-rose">Logout</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main class="flex-1 px-10 py-8">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-serif text-3xl">Manajemen Produk</h2>
+        <a href="add-produk.html"
+           class="bg-rose hover:bg-rosedeep text-white text-sm font-medium px-4 py-2 rounded transition-colors">
+          + Add Product
+        </a>
+      </div>
+
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-line text-left text-muted">
+            <th class="py-3 font-medium">No</th>
+            <th class="py-3 font-medium">Name</th>
+            <th class="py-3 font-medium">Stock</th>
+            <th class="py-3 font-medium">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b border-line">
+            <td class="py-3">1</td>
+            <td class="py-3">Kaos Polos Hitam</td>
+            <td class="py-3">50</td>
+            <td class="py-3 space-x-4">
+              <a href="edit-produk.html" class="underline underline-offset-2 hover:text-rose">Edit</a>
+              <button class="underline underline-offset-2 text-muted hover:text-rosedeep">Delete</button>
+            </td>
+          </tr>
+          <tr class="border-b border-line">
+            <td class="py-3">2</td>
+            <td class="py-3">Celana Jeans</td>
+            <td class="py-3">30</td>
+            <td class="py-3 space-x-4">
+              <a href="edit-produk.html" class="underline underline-offset-2 hover:text-rose">Edit</a>
+              <button class="underline underline-offset-2 text-muted hover:text-rosedeep">Delete</button>
+            </td>
+          </tr>
+          <tr class="border-b border-line">
+            <td class="py-3">3</td>
+            <td class="py-3">Topi Baseball</td>
+            <td class="py-3">75</td>
+            <td class="py-3 space-x-4">
+              <a href="edit-produk.html" class="underline underline-offset-2 hover:text-rose">Edit</a>
+              <button class="underline underline-offset-2 text-muted hover:text-rosedeep">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-xs text-muted py-4 border-t border-line">
+    &copy; 2026 Toko Admin
+  </footer>
+
+</body>
+</html>
