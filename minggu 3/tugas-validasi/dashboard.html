@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Gaya tulisan */
+    body { font-family: 'Quicksand', sans-serif; }
+    h1 { font-family: 'Pacifico', cursive; font-weight: 400; }
+    input, textarea, button { font-family: 'Quicksand', sans-serif; }
+
+    /* Background love-love pink soft */
+    body {
+      background-color: #fdf2f8;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path transform='translate(19.2 19.2) scale(0.4)' fill='%23f9c6dd' fill-opacity='0.6' d='M12 21s-7-4.5-9.5-9C1 9 2.5 5.5 6 5.5c2 0 3.5 1 6 3.5 2.5-2.5 4-3.5 6-3.5 3.5 0 5 3.5 3.5 6.5-2.5 4.5-9.5 9-9.5 9z'/></svg>"), url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path transform='translate(19.8 19.8) scale(0.35)' fill='%23fbcfe8' fill-opacity='0.9' d='M12 21s-7-4.5-9.5-9C1 9 2.5 5.5 6 5.5c2 0 3.5 1 6 3.5 2.5-2.5 4-3.5 6-3.5 3.5 0 5 3.5 3.5 6.5-2.5 4.5-9.5 9-9.5 9z'/></svg>"), url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path transform='translate(20.4 20.4) scale(0.3)' fill='%23f4b6d2' fill-opacity='0.45' d='M12 21s-7-4.5-9.5-9C1 9 2.5 5.5 6 5.5c2 0 3.5 1 6 3.5 2.5-2.5 4-3.5 6-3.5 3.5 0 5 3.5 3.5 6.5-2.5 4.5-9.5 9-9.5 9z'/></svg>");
+      background-size: 80px 80px, 120px 120px, 70px 70px;
+      background-position: 0 0, 50px 40px, 30px 55px;
+      background-repeat: repeat;
+    }
+      .font-judul { font-family: 'Pacifico', cursive; }
+  </style>
+</head>
+<body class="min-h-screen text-gray-700">
+  <div class="flex min-h-screen">
+
+    <!-- SIDEBAR (menu samping, hanya muncul di layar lebar) -->
+    <aside class="hidden md:flex w-60 flex-col bg-white/90 border-r border-pink-100 p-5">
+      <div class="font-judul text-2xl text-pink-500 mb-8">Pinky Space</div>
+      <nav class="space-y-1 font-semibold">
+        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-xl bg-pink-100 text-pink-600">🏠 Beranda</a>
+        <a href="#profil" class="flex items-center gap-3 px-3 py-2 rounded-xl text-pink-700 hover:bg-pink-50">👤 Profil</a>
+        <a href="#aktivitas" class="flex items-center gap-3 px-3 py-2 rounded-xl text-pink-700 hover:bg-pink-50">📋 Aktivitas</a>
+        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-xl text-pink-700 hover:bg-pink-50">💌 Pesan</a>
+        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-xl text-pink-700 hover:bg-pink-50">⚙️ Pengaturan</a>
+      </nav>
+      <a href="register.html" class="mt-auto flex items-center gap-3 px-3 py-2 rounded-xl text-rose-500 font-semibold hover:bg-pink-50">🚪 Keluar</a>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+
+      <!-- NAVBAR ATAS -->
+      <header class="flex items-center justify-between gap-3 bg-white/90 border-b border-pink-100 px-4 md:px-8 py-3">
+        <input type="text" placeholder="Cari sesuatu..."
+               class="w-full max-w-xs border border-pink-200 bg-pink-50 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-300 focus:bg-white">
+        <div class="flex items-center gap-3">
+          <span id="namaTop" class="hidden sm:block font-semibold text-pink-700">Teman</span>
+          <div id="avatar" class="w-10 h-10 rounded-full bg-pink-300 text-white font-bold flex items-center justify-center">T</div>
+          <a href="register.html" class="md:hidden text-sm font-semibold text-rose-500">Keluar</a>
+        </div>
+      </header>
+
+      <!-- ISI HALAMAN -->
+      <main class="p-4 md:p-8 space-y-6">
+
+        <!-- Banner selamat datang -->
+        <section class="bg-gradient-to-r from-pink-200 to-pink-100 rounded-2xl p-6 shadow-sm">
+          <h1 class="text-3xl text-pink-500">Selamat datang, <span id="nama">Teman</span>!</h1>
+          <p class="mt-2 text-pink-700">Registrasi berhasil. Selamat  datang.</p>
+        </section>
+
+        <!-- Kartu statistik -->
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm">
+            <div class="text-2xl">📝</div>
+            <div class="text-2xl font-bold text-pink-500 mt-1">24</div>
+            <div class="text-sm text-gray-500">Postingan</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm">
+            <div class="text-2xl">💖</div>
+            <div class="text-2xl font-bold text-pink-500 mt-1">1.280</div>
+            <div class="text-sm text-gray-500">Suka</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm">
+            <div class="text-2xl">👥</div>
+            <div class="text-2xl font-bold text-pink-500 mt-1">356</div>
+            <div class="text-sm text-gray-500">Pengikut</div>
+          </div>
+          <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm">
+            <div class="text-2xl">💌</div>
+            <div class="text-2xl font-bold text-pink-500 mt-1">5</div>
+            <div class="text-sm text-gray-500">Pesan baru</div>
+          </div>
+        </section>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+
+          <!-- Profil (data dari form register) -->
+          <section id="profil" class="bg-white rounded-2xl p-5 border border-pink-100 shadow-sm">
+            <h2 class="font-bold text-pink-600 mb-4">Profil Kamu</h2>
+            <dl class="space-y-3 text-sm">
+              <div><dt class="text-gray-400">Username</dt><dd id="pUsername" class="font-semibold">-</dd></div>
+              <div><dt class="text-gray-400">Nama</dt><dd id="pNama" class="font-semibold">-</dd></div>
+              <div><dt class="text-gray-400">Tanggal Lahir</dt><dd id="pTanggal" class="font-semibold">-</dd></div>
+              <div><dt class="text-gray-400">Alamat</dt><dd id="pAlamat" class="font-semibold">-</dd></div>
+              <div><dt class="text-gray-400">Nomor Telepon</dt><dd id="pTelepon" class="font-semibold">-</dd></div>
+            </dl>
+          </section>
+
+          <!-- Tabel aktivitas -->
+          <section id="aktivitas" class="lg:col-span-2 bg-white rounded-2xl p-5 border border-pink-100 shadow-sm">
+            <h2 class="font-bold text-pink-600 mb-4">Aktivitas Terbaru</h2>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left">
+                <thead>
+                  <tr class="text-pink-700 bg-pink-50">
+                    <th class="px-3 py-2 rounded-l-lg">Aktivitas</th>
+                    <th class="px-3 py-2">Waktu</th>
+                    <th class="px-3 py-2 rounded-r-lg">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-pink-50">
+                  <tr><td class="px-3 py-3">Membuat akun baru</td><td class="px-3 py-3">Baru saja</td><td class="px-3 py-3"><span class="px-2 py-1 rounded-full bg-pink-100 text-pink-600">Berhasil</span></td></tr>
+                  <tr><td class="px-3 py-3">Melengkapi profil</td><td class="px-3 py-3">5 menit lalu</td><td class="px-3 py-3"><span class="px-2 py-1 rounded-full bg-pink-100 text-pink-600">Berhasil</span></td></tr>
+                  <tr><td class="px-3 py-3">Verifikasi nomor telepon</td><td class="px-3 py-3">1 jam lalu</td><td class="px-3 py-3"><span class="px-2 py-1 rounded-full bg-rose-100 text-rose-500">Menunggu</span></td></tr>
+                  <tr><td class="px-3 py-3">Mengikuti 3 akun</td><td class="px-3 py-3">Kemarin</td><td class="px-3 py-3"><span class="px-2 py-1 rounded-full bg-pink-100 text-pink-600">Berhasil</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <footer class="text-center text-sm text-pink-400 pt-2 pb-4">Dibuat dengan 💖 | Pinky Space</footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Ambil data yang dikirim dari form register (ada di URL, setelah tanda ?)
+    const params = new URLSearchParams(window.location.search);
+    function ambil(kunci) { return (params.get(kunci) || "").trim(); }
+
+    const username = ambil("username");
+    const nama = ambil("nama") || "Teman";
+    const tanggal = ambil("tanggalLahir");
+    const alamat = ambil("alamat");
+    const telepon = ambil("telepon");
+
+    // Tampilkan sapaan dan avatar (huruf pertama nama)
+    document.getElementById("nama").textContent = nama;
+    document.getElementById("namaTop").textContent = nama;
+    document.getElementById("avatar").textContent = nama.charAt(0).toUpperCase();
+
+    // Tampilkan data profil (kalau kosong, tampilkan tanda "-")
+    document.getElementById("pUsername").textContent = username || "-";
+    document.getElementById("pNama").textContent = ambil("nama") || "-";
+    document.getElementById("pAlamat").textContent = alamat || "-";
+    document.getElementById("pTelepon").textContent = telepon ? "+" + telepon : "-";
+    document.getElementById("pTanggal").textContent = tanggal
+      ? new Date(tanggal + "T00:00:00").toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })
+      : "-";
+  </script>
+</body>
+</html>
