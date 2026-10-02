@@ -1,0 +1,11 @@
+{
+    "target_host": "128.0.0.2",
+    "target_ip": "128.0.0.2",
+    "port_range": {
+        "start": 2,
+        "end": 8024
+    },
+    "scan_time": "2026-10-02 09:36:32",
+    "total_open_ports": 0,
+    "open_ports": []
+}
